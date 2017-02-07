@@ -21,15 +21,15 @@ images deployed. This information is replicated through all DTR replicas.
 * Certificates and keys: the certificates, public keys, and private keys that
 are used for mutual TLS communication.
 
-This data is persisted on the host where DTR is running, using named volumes.
 [Learn more about DTR named volumes](../architecture.md).
 
+This data is persisted on the host where DTR is running, using named volumes.
 DTR also persists Docker images on the filesystem of the host running DTR, or
 on a cloud provider, depending on the way DTR is configured.
 
 ## Backup DTR data
 
-To perform a backup of a DTR node, use the `backup` command. This
+If DTR has several replicas you only need to perform a backup on one replica. The backup file should be stored apart from the DTR nodes. To perform a backup of a DTR replica, use the `backup` command. This
 command creates a backup of DTR:
 
 * Configurations,
